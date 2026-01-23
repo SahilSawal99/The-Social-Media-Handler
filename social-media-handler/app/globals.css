@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  /* White background, black text */
+  --background: #ffffff;        /* Page background */
+  --foreground: #000000;        /* Text color */
+  --primary: #000000;           /* Accent color (black) */
+  --menu-background: #ffffff;   /* Menu background white */
+  --menu-foreground: #000000;   /* Menu text black */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Keep the same in dark mode for pure white background and black text */
+    --background: #ffffff;
+    --foreground: #000000;
+    --primary: #000000;
+    --menu-background: #ffffff;
+    --menu-foreground: #000000;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu styling */
+/* This targets the menu container specifically */
+.menu, [class*="sidebar"], [class*="drawer"] {
+    background-color: white !important;
+    background: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 99999 !important;
+    /* This removes any blur effects from parents */
+    backdrop-filter: none !important; 
+}
+
+/* When menu is open, ensure no transparency */
+.menu.open {
+  background: var(--menu-background); 
+  opacity: 1; /* Fully opaque */
+}
