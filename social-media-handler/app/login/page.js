@@ -123,7 +123,7 @@ export default function LoginPage() {
 
               <div className="pt-2">
                 <div className="text-xs text-muted-foreground bg-muted p-3 rounded-md">
-                  <p className="font-semibold mb-1">Demo Credentials:</p>
+                  <p className="font-semibold mb-1">Demo Credential:</p>
                   <p>Username: <span className="font-mono">admin</span></p>
                   <p>Password: <span className="font-mono">admin123</span></p>
                 </div>
@@ -156,7 +156,7 @@ export default function LoginPage() {
           transition={{ delay: 0.5 }}
           className="text-center text-sm text-muted-foreground mt-6"
         >
-          Secure • Fast • Easy to Use
+          • Secure • Fast • Easy
         </motion.p>
       </motion.div>
     </div>
